@@ -1,2 +1,2 @@
-# ctdiab.github.io
-This is made using the Quickstart guide. It may become my portfolio site.
+# Charles Diab's Technical Writing Portfolio
+This site contains a few examples of technical writing I have created.
