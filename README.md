@@ -16,8 +16,34 @@ The WebSMARTT help documentation was created and primarily updated in Adobe Robo
 For a specific example from within the WebSMARTT help documentation, let's take a look at the topic [WebSMARTT Sync](https://mcssoftware.atlassian.net/wiki/spaces/WEB/pages/314147027/WebSMARTT+Sync) and its subtopics.\
 WebSMARTT Sync, or WS Sync, is a feature that allows users to synchronize communication between WebSMARTT and school site databases. I chose to highlight this group of topics because I think it demonstrates taking a feature that is uniquely configured compared to other WebSMARTT offerings and guides users step by step to make the process as simple as possible.\
 On most of the WebSMARTT tabs (Customers, Point of Sale, etc.), features are organized into tiles with hyperlinks to specific pages containing the individual features. However, the WebSMARTT Sync tile displays hyperlinks to three pages that are meant to be completed in sequence. To convey this, the hyperlinks are described and written as "steps" 1-3 instead of a series of options from which a user may select. After a user reaches the end of the page explaining one step, there is an explanation of how to navigate to the next step and a link to the page containing the next step. On each step's page, there are multiple screenshots, some with relevant areas highlighted, for each action and result in the process. I obtained screenshots and details for these steps by using access to a testing environment and performing steps myself. This was not limited to the golden path, as some screenshots highlight specific error messages. I made sure that I could navigate the pages myself before writing instructions in the help documentation instead of receiving information from a member of the development or product management team and copying the information sight unseen.
-# Developer Documentation
-The following entries show examples of technical documentation I have created with developers as the primary audience.
+# Internal Documentation
+The following entries show examples of technical documentation I have created with internal users as the primary audience. This includes developers, support, and other technical writers.
+## MySchoolBucks.com Data Transfer API Version 2
+MySchoolBucks (MSB) is a web-based suite of features for parents and school administrators to manage funds for school purchases, which can be used to buy school meals as well as supplies or spirit merchandise. The MySchoolBucks.com Data Transfer API is used to transfer purchasing and account data between MSB and the school's database.\
+For the internal documentation related to this API, I was tasked with taking the information from the MSB development team and describing it in a way that is readable to other developers. The following is a general outline of the document since it is not available online:
+1. Definition of components\
+   a. Overview of MySchoolBucks.com\
+   b. Secure Connection\
+   c. Information Exchanged\
+   d. Scheduling
+2. API (includes the variables and what is returned from each line)
+3. Upgrading from Version 1 to Version 2
+4. Document Type Definitions
+### Data Transfer API Example
+Each line of the MySchoolBucks.com Data Transfer API is defined in the internal documentation. This includes what the line does, the definition of variables, and what is returned (if applicable). To show how I organized this information into something more readable, here is an example:
+```
+byte[] getGLAcctReportXML(String userID, String password, String startDate, String endDate)
+```
+Downloads G/L account entries in XML format from MySchoolBucks to the client application.
+| Variable | Description |
+| -------- | ----------- |
+| userID | The MySchoolBucks user ID to login |
+| password | The password associated with the userID to login to MySchoolBucks |
+| startDate | Includes transactions with a batch date of startDate or later |
+| endDate | Includes transactions with a batch date of endDate or earlier |
+**Returns:** An XML document
+## Hyland Technical Writing Style Guide
+The Hyland Technical Writing Style Guide is an internal resource for the technical writers at Hyland that outlines how to write when writing Hyland user guides. This is to ensure a consistent voice across documentation even when written by many different writers. This style guide also defines how to write about Hyland products, including how to capitalize proprietary terms, how to refer to software, versioning, etc.
 # Video Tutorials
 The following entries show exampes of animations or video tutorials I created while making e-learning and training materials.
 ## How-To Videos for MySchoolBucks
