@@ -29,8 +29,8 @@ For the internal documentation related to this API, I was tasked with taking the
 2. API (includes the variables and what is returned from each line)
 3. Upgrading from Version 1 to Version 2
 4. Document Type Definitions
-### Data Transfer API Example
-Each line of the MySchoolBucks.com Data Transfer API is defined in the internal documentation. This includes what the line does, the definition of variables, and what is returned (if applicable). To show how I organized this information into something more readable, here is an example:
+### Data Transfer API Excerpt
+Each line of the MySchoolBucks.com Data Transfer API is defined in the internal documentation. This includes what the line does, the definition of variables, and what is returned (if applicable). To show how I organized this information into something more readable, here is an excerpt from the guide:
 ```
 byte[] getGLAcctReportXML(String userID, String password, String startDate, String endDate)
 ```
@@ -41,9 +41,25 @@ Downloads G/L account entries in XML format from MySchoolBucks to the client app
 | password | The password associated with the userID to login to MySchoolBucks |
 | startDate | Includes transactions with a batch date of startDate or later |
 | endDate | Includes transactions with a batch date of endDate or earlier |
+
 **Returns:** An XML document
 ## Hyland Technical Writing Style Guide
-The Hyland Technical Writing Style Guide is an internal resource for the technical writers at Hyland that outlines how to write when writing Hyland user guides. This is to ensure a consistent voice across documentation even when written by many different writers. This style guide also defines how to write about Hyland products, including how to capitalize proprietary terms, how to refer to software, versioning, etc.
+The Hyland Technical Writing Style Guide is an internal resource for the technical writers at Hyland that outlines how to write when writing Hyland user guides. This is to ensure a consistent voice across documentation even when written by many different writers. This style guide also defines how to write about Hyland products, including how to capitalize proprietary terms, how to refer to software, versioning, etc.\
+This internal style guide is hosted on Confluence as the Hyland Technical Writing Style Guide space, and it is organized into a series of pages that describe individual topics relevant to writing user guide documentation for Hyland. To ensure that the guidelines are consistent and agreed upon by the team overall, the pages are not edited directly by individual writers when proposing or drafting updates. Instead, a member of the editorial team (such as myself) creates a page in a separate space dedicated to drafts, and fellow editors and the writing managers review the draft before a writing manager copies those changes to the existing style guide page.
+### Describing Computers Excerpt
+The topics that may be described in a page of the Hyland Technical Writing Style Guide may be as broad as "Be Concise" or as specific as "Using Buttons or Icons in a Table". The topic I wish to highlight is an example of the latter type.\
+The topic "Describing Computers" existed before I joined the editing team at Hyland. However, I received a question while editing a piece of writing; the writer wanted to refer to a virtual machine, but the existing style guidelines said "Do not use **machine** to refer to a computer." Obviously, the writer was advised to use the widely accepted term "virtual machine", and I flagged the style guideline as being in need of an update. Rather than make one small change and submit it, however, I noticed that the guideline as it existed was written as plain paragraphs explaining the accepted terms for computers in the user guide documentation. To make our guidelines clearer and easier to reference, I organized the terms into a list that provided examples for accepted uses.\
+Here is an excerpt of the Hyland Technical Writing Style Guide that shows the topic that I updated:\
+**Describing Computers**\
+Be as specific as possible when referencing computers in normal paragraph text. Avoid using the term **computer** unless you are referring to computers in a generic sense. Instead, use a specific type of computer being referenced, such as **workstation** or **server**.\
+The table below lists computer terms and when it is appropriate to use them:
+| Computer Term | When to Use |
+| :--- | :--- |
+| **workstation** | Use **workstation** to refer to a computer that is used by a single person to perform work.<br/>**Incorrect**:<br/>Before executing a process, your computer must be registered.<br/>**Correct**:<br/>Before executing a process, your workstation must be registered. |
+| **server** | Use **server** to refer to a computer that provides functionality to other programs or devices.<br/>**Incorrect**:<br/>The computer hosting the OnBase database was shut down during processing.<br/>**Correct**:<br/>The server hosting the OnBase database was shut down during processing. |
+| **computer** | Use **computer** to refer to a computer that could be a workstation, a server, or both.<br/>**Incorrect**:<br/>Running OnBase as a Windows service turns the OnBase Client into a background process that automatically starts and runs when the workstation boots, without user intervention.<br/>**Correct**:<br/>Running OnBase as a Windows service turns the OnBase Client into a background process that automatically starts and runs when the computer boots, without user intervention. |
+| **machine** | In general, do not use **machine** to refer to a computer.<br/>The exception to this is when referring to a specific, accepted term that uses the word **machine**, such as **virtual machine**.<br/>**Incorrect**:<br/>These hosts can be bare-metal servers, virtual computers, or instances running on a public cloud.<br/>**Correct**:<br/>These hosts can be bare-metal servers, virutal machines, or instances running on a public cloud. |
+
 # Video Tutorials
 The following entries show exampes of animations or video tutorials I created while making e-learning and training materials.
 ## How-To Videos for MySchoolBucks
